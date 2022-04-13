@@ -928,10 +928,18 @@ transform: rotateY(50%); */
 }
 
 .icon-modal {
-
-  width: 11px;
-  height: 11px;
-  fill: #212121;
+width: 11px;
+height: 11px;
+fill:var(--tittle-colore);
+transition: fill var(--speed-animation);
+}
+/* .icon-modal:hover,
+.icon-modal:focus {
+  fill:var(--main-blue);
+} */
+/* .button-modal:hover, */
+.button-modal:hover .icon-modal {
+fill: var(--main-blue);
 }
 
 .form {}
@@ -948,67 +956,121 @@ transform: rotateY(50%); */
 }
 
 .for-fild {
-  position: relative;
-  display: block;
-}
-
-.form-input {
-  margin: 0;
-  display: block;
-  width: 448px;
-  height: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 28px;
-  padding-left: 42px;
-}
-
-.form-label {
   display: block;
   margin-left: 40px;
   padding-bottom: 4px;
 }
 
-.form-icon {
-  display: block;
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  background-color: #188ce8;
-  top: 50%;
-  left: 55px;
-  transform: translateY(-50%);
-}
-
-.comenty {
-  display: block;
+.form-input {
+  position: relative;
+  margin: 0;
+  display:block;
   width: 448px;
-  height: 120px;
+  height: 40px;
+  padding-left: 42px;
+  outline: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+  color: currentColor;
+  transition: border var(--speed-animation);
+}
+
+.box-input {
+  position: relative;
+  color: #212121;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 28px;
+  padding-left: 42px;
+}
+::placeholder{
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.1;
+  color: rgba(117, 117, 117, 0.5);
+  
+}
+.form-icon {
+display: block;
+position: absolute;
+width: 18px;
+height: 18px;
+top: 50%;
+left: 55px;
+transform: translateY(-50%);
+fill: var(--tittle-colore);
+transition: fill var(--speed-animation);
+}
+.item-form{
+width: 18px;
+height: 18px;
+
+
+}
+.comenty {
+  outline: transparent;
+  width: 448px;
+  height: 120px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 16px;
+  padding-left: 16px;
   resize: none;
   margin-bottom: 20px;
-
+  color:currentColor;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  
 }
-
+.textarea-box{
+display:block;
+margin-left: auto;
+margin-right: auto;
+width: 448px;
+height: 120px
+}
 .checkbox {
-  margin-bottom: 30px;
-  margin-left: 54px;
+  position: relative;
   width: 16px;
   height: 15px;
+  position: absolute;
+  appearance: none;
+  
 }
-
+.checkbox-box{ 
+display: flex;
+align-items: center;
+margin-bottom: 30px;
+margin-top: 20px; 
+}
+.icon-ok{
+  position: absolute;
+  left: 52px;
+  /* top: -50%; */
+  transform: rotateY(-50%);
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--tittle-colore);
+  border-radius: 2px;
+  transition: border var(--speed-animation);
+}
 .checkbox-text {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
-
+font-weight: 400;
+font-size: 14px;
+line-height: 1.7;
+margin-left: 76px;
 
 }
-
+.checkbox:checked ~ .icon-ok{
+  background-image: url(../images/check.svg);
+  background-size: contain;
+  background-origin:content-box;
+  border-color: #2196F3;
+  background-color: #2196f3;
+}
 .send-button {
   display: block;
   margin-bottom: 40px;
@@ -1020,11 +1082,18 @@ transform: rotateY(50%); */
   margin-right: auto;
   background-color: var(--main-blue);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
   font-weight: 700;
   font-size: 16px;
   line-height: 30px color: #FFFFFF;
+  transition: background-color var(--speed-animation);
 }
-
+.send-button:hover,
+.send-button:focus {
+  background: #188CE8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
 .send-text {
   font-weight: 700;
   font-size: 16px;
@@ -1034,4 +1103,17 @@ transform: rotateY(50%); */
 
 .rules-link {
   color: var(--main-blue);
+}
+.form-input:hover ~ .form-icon {
+  fill: var(--main-blue);
+
+}
+.form-input:focus ~ .form-icon {
+  fill: var(--main-blue);
+}
+.form-input:hover,
+.form-input:focus{
+  border: 1px solid #2196F3;
+  box-sizing: border-box;
+  border-radius: 4px;
 }

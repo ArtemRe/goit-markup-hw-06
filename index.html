@@ -408,32 +408,31 @@
         <div class="modal">
             <form class="form">
                 <p class="madal-text">Оставьте свои данные, мы вам перезвоним</p>
-                <span class="form-label">Имя</span>
-                <label class="for-fild">
-                    <input type="text" class="form-input" name="name" placeholder=" " />
-
+                <label class="for-fild" for="name" >Имя</label>
+                <div class="box-input"> <input type="text" class="form-input"  name="name" id="name" placeholder=" " />
                     <svg class="form-icon">
-                        <use></use>
-                    </svg></label>
-                <span class="form-label">Телефон</span>
-                <label class="for-fild">
-                    <input type="text" class="form-input" name="tel" placeholder=" " />
+                        <use class="item-form" href="./images/symbol-defs.svg#icon-mans"></use>
+                    </svg>
+                </div>
+                <label for="tel" class="for-fild">Имя</label>
+                <div class="box-input"> <input type="tel" class="form-input" id="tel" name="number" placeholder=" " />
                     <svg class="form-icon">
-                        <use></use>
-                    </svg></label>
-                <span class="form-label">Телефон</span>
-                <label class="for-fild">
-                    <input type="text" class="form-input" name="tel" placeholder=" " />
+                        <use class="item-form" href="./images/symbol-defs.svg#icon-phone"></use>
+                    </svg>
+                </div>
+                <label for="email" class="for-fild">Имя</label>
+                <div class="box-input"> <input type="email" class="form-input" id="email" name="email" placeholder=" " />
                     <svg class="form-icon">
-                        <use></use>
-                    </svg></label>
-                <span class="form-label">Комментарий</span>
-                <label class="for-fild" for="comments">
-                    <textarea class="comenty" name="comments"></textarea></label>
-                <label>
-                    <input class="checkbox" type="checkbox" name="topic" value="rules" />
-                    <span class="checkbox-text">Соглашаюсь с рассылкой и принимаю <a class="rules-link" href="">Условия
-                            договора</a></span></label>
+                        <use class="item-form" href="./images/symbol-defs.svg#icon-email-black"></use>
+                    </svg>
+                </div>
+                
+                <label class="for-fild" for="comments">Комментарий</label>
+                  <div class="textarea-box"><textarea class="comenty" name="comments" placeholder="Введите текст"></textarea></div>
+                
+                <label class="checkbox-box"> <input class="checkbox" type="checkbox" name="topic" value="rules" />
+            <span class="icon-ok"></span> <b class="checkbox-text">Соглашаюсь с рассылкой и принимаю <a class="rules-link" href="">Условия
+                            договора</a></b> <span class="icon-ok"></span></label>
                 <button class="send-button" type="submit"><span class="send-text">Отправить<span></button>
             </form>
             <button class="button-modal" type="button" data-modal-close>
