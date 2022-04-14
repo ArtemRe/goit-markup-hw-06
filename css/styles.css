@@ -377,7 +377,7 @@ a {
 }
 
 .tim-inner:last-child {
-  margin-right: o;
+  margin-right: 0;
 }
 
 .tim-title {
@@ -510,7 +510,7 @@ a {
 }
 
 .foto-items {
-  width: calc(100 % / 3);
+  width: calc(100% / 3);
   margin: 15px;
   display: block;
 
@@ -972,7 +972,7 @@ transition: fill var(--speed-animation);
   display:block;
   width: 448px;
   height: 40px;
-  padding-left: 35px;
+  padding-left:  42px;
   outline: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
@@ -1032,6 +1032,7 @@ height: 18px;
   
 }
 .textarea-box{
+  
 display:block;
 margin-left: auto;
 margin-right: auto;
@@ -1066,7 +1067,8 @@ margin-top: 20px;
   position: absolute;
   left: 52px;
   /* top: -50%; */
-  transform: rotateY(-50%);
+  
+  /* transform: translateY(-50%); */
   display: inline-block;
   width: 16px;
   height: 15px;
@@ -1102,7 +1104,8 @@ line-height: 1.7;
   border-radius: 4px;
   font-weight: 700;
   font-size: 16px;
-  line-height: 30px color: #FFFFFF;
+  line-height: 30px; 
+  color: #FFFFFF;
   transition: background-color var(--speed-animation);
 }
 .send-button:hover,
@@ -1157,8 +1160,9 @@ padding-left: 15px;
   align-items: center;
   justify-content: center;
   padding-left: 29px;
-  /* padding-top: 10px; */
-  /* padding-bottom: 10px; */
+  padding-top: 10px; 
+  padding-bottom: 10px; 
+  padding-right: 28px;
   margin-left: 12px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -1187,5 +1191,5 @@ padding-left: 15px;
   height: 24px;
   fill:var(--main-bacgraund);
   margin-left: 10px;
-  margin-right: 28px;
+  /* margin-right: 28px; */
 }
