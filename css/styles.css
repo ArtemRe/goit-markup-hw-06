@@ -874,6 +874,8 @@ transform: rotateY(50%); */
 
 
 .modal {
+  display: flex;
+  justify-content: center;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -885,6 +887,7 @@ transform: rotateY(50%); */
     0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  margin: 40px;
 
 }
 
@@ -938,8 +941,9 @@ transition: fill var(--speed-animation);
   fill:var(--main-blue);
 } */
 /* .button-modal:hover, */
-.button-modal:hover .icon-modal {
-fill: var(--main-blue);
+.button-modal:hover .icon-modal,
+.button-modal:focus .icon-modal {
+ fill: var(--main-blue);
 }
 
 .form {}
@@ -951,13 +955,14 @@ fill: var(--main-blue);
   text-align: center;
   color: var(--tittle-colore);
   margin-top: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
 
 }
 
 .for-fild {
-  display: block;
-  margin-left: 40px;
+  display: flex;
+  justify-content: left;
+  /* margin-left: 40px; */
   padding-bottom: 4px;
 }
 
@@ -967,7 +972,7 @@ fill: var(--main-blue);
   display:block;
   width: 448px;
   height: 40px;
-  padding-left: 42px;
+  padding-left: 35px;
   outline: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
@@ -979,10 +984,11 @@ fill: var(--main-blue);
 .box-input {
   position: relative;
   color: #212121;
-  margin-left: auto;
+  /* margin-left: auto;
   margin-right: auto;
   margin-bottom: 28px;
-  padding-left: 42px;
+  padding-left: 42px; */
+  margin-bottom: 10px;
 }
 ::placeholder{
   font-weight: 400;
@@ -998,7 +1004,7 @@ position: absolute;
 width: 18px;
 height: 18px;
 top: 50%;
-left: 55px;
+left: 15px;
 transform: translateY(-50%);
 fill: var(--tittle-colore);
 transition: fill var(--speed-animation);
@@ -1033,18 +1039,28 @@ width: 448px;
 height: 120px
 }
 .checkbox {
-  position: relative;
-  width: 16px;
-  height: 15px;
-  position: absolute;
-  appearance: none;
+position: absolute;
+left: 0;
+ width: 16px;
+height: 15px;
+appearance: none;
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
   
 }
 .checkbox-box{ 
 display: flex;
+justify-content: center;
 align-items: center;
 margin-bottom: 30px;
 margin-top: 20px; 
+}
+.checkbox:focus ~ .icon-ok {
+  border: 2px solid #2196F3;
+}
+.checkbox:focus {
+  opacity: 0;
 }
 .icon-ok{
   position: absolute;
@@ -1062,7 +1078,7 @@ margin-top: 20px;
 font-weight: 400;
 font-size: 14px;
 line-height: 1.7;
-margin-left: 76px;
+/* margin-left: 76px; */
 
 }
 .checkbox:checked ~ .icon-ok{
