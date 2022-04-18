@@ -1150,10 +1150,20 @@ border-radius: 4px;
 background-color:var(--footer-black);
 color: rgba(255, 255, 255, 0.6);
 outline: none;
+font-family: 'Roboto';
+font-style: normal;
 font-weight: 400;
 font-size: 16px;
 line-height: 1.3;
 padding-left: 15px;
+}
+.footer-input::placeholder{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.6);
 }
 .button-footer{
   display: flex;
